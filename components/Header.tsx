@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
@@ -98,7 +99,7 @@ const Header: React.FC = () => {
           aria-modal="true"
       >
           <div className="fixed inset-0 bg-white"></div>
-          <div className="relative h-full flex flex-col">
+          <div className="relative z-10 h-full flex flex-col">
                <div className="flex items-center justify-between h-20 px-6 bg-white shadow-sm flex-shrink-0">
                    <a href="#" onClick={closeMenu} className="flex items-center space-x-3">
                        <svg className="h-9 w-9" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">

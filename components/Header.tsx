@@ -94,59 +94,56 @@ const Header: React.FC = () => {
       {/* Mobile Menu Panel */}
       <div
           id="mobile-menu"
-          className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out md:hidden flex flex-col bg-white ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
           role="dialog"
           aria-modal="true"
       >
-          <div className="fixed inset-0 bg-white"></div>
-          <div className="relative z-10 h-full flex flex-col">
-               <div className="flex items-center justify-between h-20 px-6 bg-white shadow-sm flex-shrink-0">
-                   <a href="#" onClick={closeMenu} className="flex items-center space-x-3">
-                       <svg className="h-9 w-9" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                           <defs>
-                               <linearGradient id="logo-gradient-mobile" x1="0" y1="0" x2="1" y2="1">
-                                   <stop offset="0%" stopColor="#1976D2" />
-                                   <stop offset="100%" stopColor="#0D47A1" />
-                               </linearGradient>
-                           </defs>
-                           <path fill="url(#logo-gradient-mobile)" d="M6 4V28H16C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4H6Z" />
-                           <path d="M18 18L28 28" stroke="#FFB74D" strokeWidth="4" strokeLinecap="round" />
-                       </svg>
-                       <span className="text-2xl font-extrabold tracking-tight text-brand-primary">Dogan Recruiting</span>
-                   </a>
-                  <button
-                      onClick={closeMenu}
-                      className="p-2 -mr-2 rounded-md text-brand-primary"
-                      aria-label="Close menu"
-                  >
-                      <XMarkIcon className="h-8 w-8" />
-                  </button>
-               </div>
-               <div className="flex-grow flex flex-col items-center justify-center -mt-20">
-                  <nav className="flex flex-col items-center text-center space-y-6">
-                      {navLinks.map((link) => (
-                          <a
-                              key={link.href}
-                              href={link.href}
-                              onClick={closeMenu}
-                              className="text-2xl font-semibold text-slate-700 hover:text-brand-primary transition-colors"
-                          >
-                              {link.name}
-                          </a>
-                      ))}
-                  </nav>
-                  <div className="mt-10 pt-6 border-t border-slate-200 w-full max-w-xs flex flex-col items-center space-y-6">
-                      <a 
-                          href="#contact"
+           <div className="flex items-center justify-between h-20 px-6 shadow-sm flex-shrink-0">
+               <a href="#" onClick={closeMenu} className="flex items-center space-x-3">
+                   <svg className="h-9 w-9" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                       <defs>
+                           <linearGradient id="logo-gradient-mobile" x1="0" y1="0" x2="1" y2="1">
+                               <stop offset="0%" stopColor="#1976D2" />
+                               <stop offset="100%" stopColor="#0D47A1" />
+                           </linearGradient>
+                       </defs>
+                       <path fill="url(#logo-gradient-mobile)" d="M6 4V28H16C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4H6Z" />
+                       <path d="M18 18L28 28" stroke="#FFB74D" strokeWidth="4" strokeLinecap="round" />
+                   </svg>
+                   <span className="text-2xl font-extrabold tracking-tight text-brand-primary">Dogan Recruiting</span>
+               </a>
+              <button
+                  onClick={closeMenu}
+                  className="p-2 -mr-2 rounded-md text-brand-primary"
+                  aria-label="Close menu"
+              >
+                  <XMarkIcon className="h-8 w-8" />
+              </button>
+           </div>
+           <div className="flex-grow flex flex-col items-center justify-center -mt-20">
+              <nav className="flex flex-col items-center text-center space-y-6">
+                  {navLinks.map((link) => (
+                      <a
+                          key={link.href}
+                          href={link.href}
                           onClick={closeMenu}
-                          className="w-full text-center px-6 py-3 rounded-full font-semibold text-white bg-brand-secondary hover:bg-brand-dark transition-all duration-300"
+                          className="text-2xl font-semibold text-slate-700 hover:text-brand-primary transition-colors"
                       >
-                          {t('get_in_touch')}
+                          {link.name}
                       </a>
-                      <LanguageSelector isScrolled={true} />
-                  </div>
-               </div>
-          </div>
+                  ))}
+              </nav>
+              <div className="mt-10 pt-6 border-t border-slate-200 w-full max-w-xs flex flex-col items-center space-y-6">
+                  <a 
+                      href="#contact"
+                      onClick={closeMenu}
+                      className="w-full text-center px-6 py-3 rounded-full font-semibold text-white bg-brand-secondary hover:bg-brand-dark transition-all duration-300"
+                  >
+                      {t('get_in_touch')}
+                  </a>
+                  <LanguageSelector isScrolled={true} />
+              </div>
+           </div>
       </div>
     </>
   );

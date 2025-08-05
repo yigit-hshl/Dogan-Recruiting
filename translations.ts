@@ -211,6 +211,44 @@ const translations: Record<string, Record<string, any>> = {
             description: 'Every client and candidate is a partner. We provide dedicated, tailored support to meet your unique needs and aspirations.'
         }
     ],
+
+    // Jobs
+    jobs_super_title: 'Featured Openings',
+    jobs_title: 'Find Your Next Challenge',
+    jobs_subtitle: 'Explore a selection of our current, AI-generated job postings for medical professionals. Is your dream job among them?',
+    jobs_specialty_label: 'Specialty:',
+    jobs_load_more_button: 'Load New Jobs',
+    jobs_loading_button: 'Loading...',
+    jobs_error_load: 'Could not load job postings. Please try again.',
+    jobs_error_unexpected: 'An unexpected error occurred. Please try again later.',
+
+    // Testimonials
+    testimonials_super_title: 'Client Voices',
+    testimonials_title: 'What Our Partners Say',
+    testimonials_subtitle: 'We are proud to have built strong, lasting relationships with leading healthcare institutions and talented professionals.',
+    testimonials_list: [
+      {
+        id: '1',
+        quote: "Dogan Recruiting understood our specific needs and found us a highly qualified cardiologist in record time. Their dedication and market knowledge are unparalleled.",
+        image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&q=80&crop=faces&facepad=2',
+        name: 'Dr. Lena Vogel',
+        title: 'Chief Medical Officer, Munich Heart Center'
+      },
+      {
+        id: '2',
+        quote: "As a candidate, I felt supported throughout the entire process. The team at Dogan Recruiting provided valuable insights and helped me secure my dream job as a Head Nurse.",
+        image: 'https://images.unsplash.com/photo-1580852300654-03ab8572ca6e?w=100&h=100&fit=crop&q=80&crop=faces&facepad=2',
+        name: 'Markus Weber',
+        title: 'Head Nurse, Hamburg Specialist Clinic'
+      },
+      {
+        id: '3',
+        quote: "Their professionalism and transparent communication made the collaboration a complete success. They are our go-to partner for all future staffing needs.",
+        image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=100&h=100&fit=crop&q=80&crop=faces&facepad=2',
+        name: 'Dr. Klaus Richter',
+        title: 'Practice Owner, Frankfurt Radiology'
+      }
+    ],
     
     // Contact
     contact_super_title: 'Get in Touch',
@@ -560,6 +598,44 @@ const translations: Record<string, Record<string, any>> = {
             title: 'Persönlicher Ansatz',
             description: 'Jeder Klient und jeder Kandidat ist ein Partner. Wir bieten dedizierte, maßgeschneiderte Unterstützung, um Ihre einzigartigen Bedürfnisse und Ziele zu erfüllen.'
         }
+    ],
+
+    // Jobs
+    jobs_super_title: 'Aktuelle Stellenangebote',
+    jobs_title: 'Finden Sie Ihre nächste Herausforderung',
+    jobs_subtitle: 'Entdecken Sie eine Auswahl unserer aktuellen, KI-generierten Stellenanzeigen für medizinisches Fachpersonal. Ist Ihre Traumstelle dabei?',
+    jobs_specialty_label: 'Fachrichtung:',
+    jobs_load_more_button: 'Neue Stellen laden',
+    jobs_loading_button: 'Lädt...',
+    jobs_error_load: 'Stellenangebote konnten nicht geladen werden. Bitte versuchen Sie es erneut.',
+    jobs_error_unexpected: 'Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.',
+
+    // Testimonials
+    testimonials_super_title: 'Kundenstimmen',
+    testimonials_title: 'Was unsere Partner sagen',
+    testimonials_subtitle: 'Wir sind stolz darauf, starke und dauerhafte Beziehungen zu führenden Gesundheitseinrichtungen und talentierten Fachkräften aufgebaut zu haben.',
+    testimonials_list: [
+      {
+        id: '1',
+        quote: "Dogan Recruiting hat unsere spezifischen Anforderungen verstanden und uns in Rekordzeit einen hochqualifizierten Kardiologen vermittelt. Ihr Engagement und ihre Marktkenntnis sind unübertroffen.",
+        image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&q=80&crop=faces&facepad=2',
+        name: 'Dr. Lena Vogel',
+        title: 'Chefärztin, Herzzentrum München'
+      },
+      {
+        id: '2',
+        quote: "Als Kandidat fühlte ich mich während des gesamten Prozesses hervorragend betreut. Das Team von Dogan Recruiting gab mir wertvolle Einblicke und half mir, meine Traumstelle als Pflegedienstleiter zu finden.",
+        image: 'https://images.unsplash.com/photo-1580852300654-03ab8572ca6e?w=100&h=100&fit=crop&q=80&crop=faces&facepad=2',
+        name: 'Markus Weber',
+        title: 'Pflegedienstleiter, Fachklinik Hamburg'
+      },
+      {
+        id: '3',
+        quote: "Ihre Professionalität und die transparente Kommunikation haben die Zusammenarbeit zu einem vollen Erfolg gemacht. Sie sind unser Partner für alle zukünftigen Personalfragen.",
+        image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=100&h=100&fit=crop&q=80&crop=faces&facepad=2',
+        name: 'Dr. Klaus Richter',
+        title: 'Praxisinhaber, Radiologie Frankfurt'
+      }
     ],
     
     // Contact

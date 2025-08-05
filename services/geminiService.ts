@@ -1,37 +1,47 @@
+
 import { GoogleGenAI, GenerateContentResponse, Type } from "@google/genai";
 import { Job } from '../types';
 
-const API_KEY = process.env.API_KEY;
-
-if (!API_KEY) {
-  throw new Error("API_KEY environment variable not set.");
-}
-
-const ai = new GoogleGenAI({ apiKey: API_KEY });
+// Lazily initialize the client to prevent app crash on load.
+// Returns null if the API key is missing.
+const getAiClient = (): GoogleGenAI | null => {
+    const API_KEY = process.env.API_KEY;
+    if (!API_KEY) {
+      console.error("API_KEY environment variable not set. The application will not be able to connect to Gemini.");
+      return null;
+    }
+    return new GoogleGenAI({ apiKey: API_KEY });
+};
 
 export const generateContactResponse = async (name: string, message: string, language: 'en' | 'de'): Promise<string> => {
-    try {
-        const prompt = language === 'de'
-            ? `Der Name des Benutzers ist ${name} und seine Nachricht lautet: "${message}". Bestätigen Sie den Erhalt der Nachricht herzlich und professionell. Versichern Sie, dass ein Spezialist von Dogan Recruiting die Anfrage prüfen und sich innerhalb von 24 Geschäftsstunden melden wird. Halten Sie es kurz und freundlich.`
-            : `The user's name is ${name} and their message is: "${message}". Acknowledge their message warmly and professionally. Assure them that a specialist from Dogan Recruiting will review their inquiry and contact them within 24 business hours. Keep it concise and friendly.`;
-        
-        const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
-            contents: prompt,
-             config: {
-                thinkingConfig: { thinkingBudget: 0 }
-            }
-        });
-        return response.text;
-    } catch (error) {
-        console.error("Error generating contact response:", error);
-        return language === 'de'
-            ? "Vielen Dank für Ihre Nachricht. Wir haben sie erhalten und werden uns in Kürze bei Ihnen melden."
-            : "Thank you for your message. We have received it and will get back to you shortly.";
+    const ai = getAiClient();
+    if (!ai) {
+        // Throw an error that will be caught by the component's error handler.
+        throw new Error("AI service is not available.");
     }
+    
+    const prompt = language === 'de'
+        ? `Der Name des Benutzers ist ${name} und seine Nachricht lautet: "${message}". Bestätigen Sie den Erhalt der Nachricht herzlich und professionell. Versichern Sie, dass ein Spezialist von Dogan Recruiting die Anfrage prüfen und sich innerhalb von 24 Geschäftsstunden melden wird. Halten Sie es kurz und freundlich.`
+        : `The user's name is ${name} and their message is: "${message}". Acknowledge their message warmly and professionally. Assure them that a specialist from Dogan Recruiting will review their inquiry and contact them within 24 business hours. Keep it concise and friendly.`;
+    
+    const response = await ai.models.generateContent({
+        model: "gemini-2.5-flash",
+        contents: prompt,
+         config: {
+            thinkingConfig: { thinkingBudget: 0 }
+        }
+    });
+    return response.text;
 };
 
 export const generateJobPostings = async (language: 'en' | 'de'): Promise<Job[]> => {
+    const ai = getAiClient();
+    // If client fails to initialize, return an empty array.
+    // The Jobs component will handle this as an error state.
+    if (!ai) {
+        return [];
+    }
+    
     const jobSchema = {
         type: Type.OBJECT,
         properties: {
@@ -69,6 +79,7 @@ export const generateJobPostings = async (language: 'en' | 'de'): Promise<Job[]>
         return jobs;
     } catch (error) {
         console.error("Error generating job postings:", error);
+        // The component will handle the empty array as an error state.
         return [];
     }
 };

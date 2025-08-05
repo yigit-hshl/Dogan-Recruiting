@@ -6,8 +6,6 @@ import About from './components/About';
 import Services from './components/Services';
 import Process from './components/Process';
 import WhyChooseUs from './components/WhyChooseUs';
-import Jobs from './components/Jobs';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Impressum from './components/Impressum';
@@ -56,8 +54,6 @@ const App: React.FC = () => {
             <Services />
             <Process />
             <WhyChooseUs />
-            <Jobs />
-            <Testimonials />
             <Contact />
           </main>
         );

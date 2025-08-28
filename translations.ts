@@ -413,15 +413,15 @@ const translations: Record<string, Record<string, any>> = {
     // About
     about_super_title: 'Wer wir sind',
     about_title: 'Ein frischer Ansatz in der Personalvermittlung',
-    about_p1: `Gegründet im Jahr ${new Date().getFullYear()}, bringt Dogan Recruiting einen modernen, energiegeladenen Ansatz in die medizinische Personalvermittlung. Die Leidenschaft unseres Gründers für den Bereich und seine direkte Branchenerfahrung ermöglichen eine einzigartige Perspektive, die sicherstellt, dass wir die differenzierten Bedürfnisse der heutigen Gesundheitslandschaft verstehen.`,
-    about_p2: 'Unser Antrieb ist das Bekenntnis zu Qualität und Partnerschaft. Unsere Mission ist es nicht nur, Stellen zu besetzen, sondern nachhaltige Beziehungen aufzubauen, die Karriereentwicklung fördern und die Patientenversorgung verbessern. Wir verbinden eine frische, dynamische Strategie mit tiefem Respekt für den medizinischen Beruf, um Verbindungen zu schaffen, die wirklich zählen.',
+    about_p1: `Gegründet im Jahr ${new Date().getFullYear()}, bringt Dogan Recruiting einen modernen, energiegeladenen Ansatz in die medizinische Personalvermittlung. Durch die persönliche Erfahrung unseres Gründers in der Branche wissen wir, worauf es in der Praxis wirklich ankommt - und können gezielt auf die Bedürfnisse des Gesundheitswesens eingehen.`,
+    about_p2: 'Unser Handeln wird getragen von unserem Anspruch an Qualität und dem festen Vertrauen in echte Partnerschaft. Unsere Mission ist es nicht nur, Stellen zu besetzen, sondern auch Beziehungen aufzubauen, die Karriereentwicklung fördern und die Patientenversorgung verbessern. Wir verbinden eine frische, dynamische Strategie mit tiefem Respekt für den medizinischen Beruf, um Verbindungen zu schaffen, die wirklich zählen.',
     about_callout_title: "Unser Versprechen",
     about_callout_text: "Qualität & nachhaltige Partnerschaften",
     explore_services_button: 'Unsere Leistungen entdecken',
 
     // Services
     services_super_title: 'Unsere Expertise',
-    services_title: 'Unsere Spezialgebiete',
+    services_title: 'Spezialgebiete',
     services_subtitle: 'Wir verbinden Gesundheitseinrichtungen – von Kliniken und Krankenhäusern über spezialisierte Praxen bis hin zu Pflegeeinrichtungen – mit den herausragenden Fachkräften, die eine exzellente Patientenversorgung sicherstellen. Unser Fokus umfasst ein breites Spektrum an Berufsfeldern:',
     services_list: [
       {
@@ -429,19 +429,19 @@ const translations: Record<string, Record<string, any>> = {
         description: 'Die größte und zentrale Gruppe in der direkten Patientenversorgung.',
         subcategories: [
           { title: 'Akademische Pflege', roles: [
-              { name: 'Pflegefachmann / Pflegefachfrau (B.Sc.)', description: 'Absolventen eines Pflegestudiums mit vertieften wissenschaftlichen Kompetenzen.' },
-              { name: 'Advanced Practice Nurse (APN) / Pflegeexperte (M.Sc.)', description: 'Hochspezialisierte Pflegekräfte mit Masterabschluss für komplexe Pflegesituationen.' },
+              { name: 'Pflegefachmann / Pflegefachfrau', description: 'Absolventen eines Pflegestudiums mit vertieften wissenschaftlichen Kompetenzen.' },
+              { name: 'Advanced Practice Nurse / Pflegeexperte', description: 'Hochspezialisierte Pflegekräfte mit Masterabschluss für komplexe Pflegesituationen.' },
           ]},
           { title: 'Stationäre & Ambulante Pflege', roles: [
-              { name: 'Gesundheits- und Krankenpfleger/in (GuK) / Pflegefachmann / Pflegefachfrau', description: 'Das Rückgrat der stationären und ambulanten Versorgung.' },
+              { name: 'Gesundheits- und Krankenpfleger/in / Pflegefachmann / Pflegefachfrau', description: 'Das Rückgrat der stationären und ambulanten Versorgung.' },
               { name: 'Gesundheits- und Kinderkrankenpfleger/in', description: 'Spezialisiert auf die Pflege von Säuglingen, Kindern und Jugendlichen.' },
               { name: 'Altenpfleger/in', description: 'Spezialisiert auf die Betreuung und Pflege älterer Menschen.' },
               { name: 'Pflegehelfer/in / Pflegeassistent/in', description: 'Unterstützung des Fachpersonals bei grundlegenden pflegerischen Tätigkeiten.' },
           ]},
           { title: 'Spezialisierte Funktionsbereiche', roles: [
               { name: 'Fachkrankenpfleger/in für Intensivpflege & Anästhesie', description: 'Hochqualifizierte Experten für die Überwachung und Versorgung kritisch kranker Patienten.' },
-              { name: 'Operationstechnische/r Assistent/in (OTA)', description: 'Vorbereitung, Instrumentierung und Unterstützung bei operativen Eingriffen.' },
-              { name: 'Anästhesietechnische/r Assistent/in (ATA)', description: 'Unterstützung von Anästhesisten vor, während und nach der Narkose.' },
+              { name: 'Operationstechnische/r Assistent/in', description: 'Vorbereitung, Instrumentierung und Unterstützung bei operativen Eingriffen.' },
+              { name: 'Anästhesietechnische/r Assistent/in', description: 'Unterstützung von Anästhesisten vor, während und nach der Narkose.' },
               { name: 'Notfallpfleger/in', description: 'Spezialisierte Pflegekräfte für die Notaufnahme.' },
               { name: 'Hygienefachkraft', description: 'Experten für die Prävention und Kontrolle von Infektionen.' },
           ]},
@@ -457,15 +457,16 @@ const translations: Record<string, Record<string, any>> = {
               { name: 'Oberarzt / Oberärztin', description: 'Fachärzte mit leitender Funktion und Personalverantwortung.' },
           ]},
           { title: 'Fachrichtungen (Auswahl)', roles: [
+              { name: 'Allgemeinmedizin (Hausärzte)'},
               { name: 'Innere Medizin', description: 'Kardiologie, Gastroenterologie, Pneumologie, Nephrologie etc.' },
               { name: 'Chirurgie', description: 'Allgemein-, Viszeral-, Herz-, Thorax-, Unfall- oder Neurochirurgie.' },
               { name: 'Anästhesiologie', description: 'Fachärzte für Anästhesie, Intensivmedizin, Notfallmedizin und Schmerztherapie.' },
-              { name: 'Gynäkologie und Geburtshilfe', description: '' },
-              { name: 'Pädiatrie (Kinder- und Jugendmedizin)', description: '' },
-              { name: 'Radiologie & Neuroradiologie', description: '' },
-              { name: 'Neurologie', description: '' },
-              { name: 'Psychiatrie und Psychotherapie', description: '' },
-              { name: 'Allgemeinmedizin (Hausärzte)', description: '' },
+              { name: 'Gynäkologie und Geburtshilfe'},
+              { name: 'Pädiatrie (Kinder- und Jugendmedizin)'},
+              { name: 'Radiologie & Neuroradiologie'},
+              { name: 'Neurologie'},
+              { name: 'Psychiatrie und Psychotherapie'},
+              
           ]},
         ],
       },
@@ -474,13 +475,13 @@ const translations: Record<string, Record<string, any>> = {
         description: 'Spezialisten, die mit hochmoderner Technik diagnostische und therapeutische Prozesse unterstützen.',
         subcategories: [
           { title: 'Laboratoriumsdiagnostik', roles: [
-              { name: 'Medizinisch-technische/r Laboratoriumsassistent/in (MTLA)', description: 'Durchführung von Laboruntersuchungen von Körperflüssigkeiten und Gewebe.' },
+              { name: 'Medizinisch-technische/r Laboratoriumsassistent/in', description: 'Durchführung von Laboruntersuchungen von Körperflüssigkeiten und Gewebe.' },
           ]},
           { title: 'Radiologische Diagnostik', roles: [
-              { name: 'Medizinisch-technische/r Radiologieassistent/in (MTRA)', description: 'Anfertigung von Röntgenbildern, Durchführung von CTs, MRTs und Strahlentherapien.' },
+              { name: 'Medizinisch-technische/r Radiologieassistent/in', description: 'Anfertigung von Röntgenbildern, Durchführung von CTs, MRTs und Strahlentherapien.' },
           ]},
           { title: 'Funktionsdiagnostik', roles: [
-              { name: 'Medizinisch-technische/r Assistent/in für Funktionsdiagnostik (MTAF)', description: 'Durchführung von Untersuchungen wie EKG, EEG, Lungenfunktionstests.' },
+              { name: 'Medizinisch-technische/r Assistent/in für Funktionsdiagnostik', description: 'Durchführung von Untersuchungen wie EKG, EEG, Lungenfunktionstests.' },
           ]},
         ],
       },
@@ -503,8 +504,8 @@ const translations: Record<string, Record<string, any>> = {
           { title: 'Berufe', roles: [
               { name: 'Zahnarzt / Zahnärztin', description: 'Diagnose und Behandlung von Zahn-, Mund- und Kieferkrankheiten.' },
               { name: 'Kieferorthopäde/in', description: 'Spezialisten für die Korrektur von Zahn- und Kieferfehlstellungen.' },
-              { name: 'Zahnmedizinische/r Fachangestellte/r (ZFA)', description: 'Assistenz bei Behandlungen, Organisation des Praxisablaufs.' },
-              { name: 'Dentalhygieniker/in (DH)', description: 'Spezialisierte Fachkräfte für Prophylaxe und Parodontaltherapie.' },
+              { name: 'Zahnmedizinische/r Fachangestellte/r', description: 'Assistenz bei Behandlungen, Organisation des Praxisablaufs.' },
+              { name: 'Dentalhygieniker/in', description: 'Spezialisierte Fachkräfte für Prophylaxe und Parodontaltherapie.' },
               { name: 'Zahntechniker/in', description: 'Herstellung von Zahnersatz, Schienen und kieferorthopädischen Geräten.' },
           ]},
         ],
@@ -515,8 +516,8 @@ const translations: Record<string, Record<string, any>> = {
         subcategories: [
           { title: 'Berufe', roles: [
               { name: 'Apotheker/in', description: 'Abgabe von Arzneimitteln, Beratung von Patienten und Ärzten.' },
-              { name: 'Pharmazeutisch-technische/r Assistent/in (PTA)', description: 'Herstellung von Rezepturen, Prüfung von Substanzen und Unterstützung des Apothekers.' },
-              { name: 'Pharmazeutisch-kaufmännische/r Angestellte/r (PKA)', description: 'Warenwirtschaft, Lagerhaltung und kaufmännische Aufgaben.' },
+              { name: 'Pharmazeutisch-technische/r Assistent/in', description: 'Herstellung von Rezepturen, Prüfung von Substanzen und Unterstützung des Apothekers.' },
+              { name: 'Pharmazeutisch-kaufmännische/r Angestellte/r', description: 'Warenwirtschaft, Lagerhaltung und kaufmännische Aufgaben.' },
           ]},
         ],
       },
@@ -535,11 +536,11 @@ const translations: Record<string, Record<string, any>> = {
         description: 'Die organisatorischen und administrativen Stützen des Gesundheitssystems.',
         subcategories: [
           { title: 'Berufe', roles: [
-              { name: 'Medizinische/r Fachangestellte/r (MFA)', description: 'Organisation von Praxisabläufen und Assistenz bei ärztlichen Tätigkeiten. (oft in Praxen)' },
+              { name: 'Medizinische/r Fachangestellte/r', description: 'Organisation von Praxisabläufen und Assistenz bei ärztlichen Tätigkeiten. (oft in Praxen)' },
               { name: 'Kaufmann / Kauffrau im Gesundheitswesen', description: 'Kaufmännische Steuerung und administrative Aufgaben.' },
               { name: 'Medizinische/r Kodierfachkraft', description: 'Verschlüsselung von Diagnosen und Prozeduren für die Abrechnung.' },
-              { name: 'Mitarbeiter/in für die medizinische Abrechnung (EBM/GOÄ/DRG)', description: 'Abwicklung von Abrechnungs- und Erstattungsprozessen.' },
-              { name: 'Stationsleitung (STL) / Pflegedienstleitung (PDL)', description: 'Führungspositionen im Pflegemanagement.' },
+              { name: 'Mitarbeiter/in für die medizinische Abrechnung', description: 'Abwicklung von Abrechnungs- und Erstattungsprozessen.' },
+              { name: 'Stationsleitung / Pflegedienstleitung', description: 'Führungspositionen im Pflegemanagement.' },
               { name: 'Klinik- / Praxismanager/in', description: 'Gesamtverantwortung für den operativen und strategischen Betrieb.' },
           ]},
         ],
@@ -564,29 +565,29 @@ const translations: Record<string, Record<string, any>> = {
         {
             icon: 'DocumentCheckIcon',
             title: '3. Präsentation & Interviews',
-            description: 'Wir präsentieren unseren Klienten eine sorgfältig ausgewählte Liste qualifizierter Kandidaten. Anschließend koordinieren und begleiten wir den Interviewprozess und unterstützen beide Seiten.'
+            description: 'Wir präsentieren unseren Klienten eine sorgfältig ausgewählte Liste qualifizierter Kandidaten. Anschließend koordinieren und begleiten wir den Bewerbungsprozess und unterstützen beide Seiten.'
         },
         {
             icon: 'HandshakeIcon',
             title: '4. Angebot & Vertragsabschluss',
-            description: "Wir unterstützen bei den Vertragsverhandlungen und dem Abschluss. Unsere Partnerschaft endet nicht hier; wir begleiten das Onboarding, um einen reibungslosen Start für alle zu sichern."
+            description: "Wir unterstützen bei den Vertragsverhandlungen und beim Vertragsabschluss. Unsere Partnerschaft endet nicht hier: Wir begleiten das Onboarding, um einen reibungslosen Start für alle zu sichern."
         }
     ],
 
     // Why Choose Us
     why_us_super_title: 'Unser Vorteil',
     why_us_title: 'Warum mit Dogan Recruiting zusammenarbeiten?',
-    why_us_subtitle: 'Wir sind mehr als nur Personalvermittler; wir sind Karrierearchitekten und strategische Partner, die sich dem Erfolg der medizinischen Gemeinschaft verschrieben haben.',
+    why_us_subtitle: 'Wir sind mehr als Personalvermittler - wir verstehen uns als Karrierearchitekten und strategische Partner, die sich dem Erfolg der medizinischen Gemeinschaft verpflichtet fühlen.',
     why_us_points: [
         {
             icon: 'SparklesIcon',
             title: 'Branchenexpertise',
-            description: 'Gegründet von jemandem mit direkter Erfahrung im medizinischen Sektor, besitzen wir ein tiefes und praktisches Verständnis für Ihre Welt.'
+            description: 'Als Unternehmen mit Wurzeln in der medizinischen Praxis verfügen wir über ein tiefes, praxisnahes Verständnis für die Anforderungen und Dynamiken Ihrer Branche.'
         },
         {
             icon: 'ShieldCheckIcon',
             title: 'Qualitätsversprechen',
-            description: 'Wir legen Wert auf die richtige Passung, nicht nur auf die Besetzung einer Stelle. Unser strenger Prüfprozess sichert langfristigen Erfolg und Zufriedenheit.'
+            description: 'Für uns zählt nicht nur die Besetzung, sondern die passgenaue Verbindung. Durch unseren sorgfältigen Auswahlprozess schaffen wir die Grundlage für nachhaltigen Erfolg und echte Zufriedenheit - auf beiden Seiten.'
         },
         {
             icon: 'BoltIcon',
@@ -596,7 +597,7 @@ const translations: Record<string, Record<string, any>> = {
         {
             icon: 'HeartIcon',
             title: 'Persönlicher Ansatz',
-            description: 'Jeder Klient und jeder Kandidat ist ein Partner. Wir bieten dedizierte, maßgeschneiderte Unterstützung, um Ihre einzigartigen Bedürfnisse und Ziele zu erfüllen.'
+            description: 'Für uns ist jeder Klient und jeder Kandidat ein Partner. Mit individueller, passgenauer Betreuung unterstützen wir Sie dabei, Ihre spezifischen Ziele zu erreichen.'
         }
     ],
 
@@ -642,7 +643,7 @@ const translations: Record<string, Record<string, any>> = {
     contact_super_title: 'Kontakt aufnehmen',
     contact_title: 'Beginnen wir ein Gespräch',
     contact_p1: 'Egal, ob Sie eine Gesundheitseinrichtung sind, die außergewöhnliche Talente sucht, oder eine medizinische Fachkraft, die nach ihrem nächsten Karriereschritt sucht, unser Team ist bereit, Sie zu unterstützen.',
-    contact_p2: 'Füllen Sie das Formular aus, und ein engagierter Spezialist wird sich mit Ihnen in Verbindung setzen, um Ihre spezifischen Bedürfnisse zu besprechen.',
+    contact_p2: 'Füllen Sie einfach das Formular aus - ein engagierter Ansprechpartner wird sich zeitnah mit Ihnen in Verbindung setzen, um Ihre individuellen Anforderungen zu besprechen.',
     contact_phone: '+49 5341 8765432',
     contact_email: 'kontakt@doganrecruiting.de',
     form_name_placeholder: 'Ihr Name',
